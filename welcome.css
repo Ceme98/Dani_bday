@@ -9,3 +9,8 @@
 #headerWrapper a{
     color: white;
 }
+#video {
+    height: 600px;
+    width: 400px;
+    padding-left: 35%;
+}
