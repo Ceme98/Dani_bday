@@ -101,15 +101,8 @@ function load() {
 				questions.replaceChild(clone, old);
 				questions.replaceChild(old, randomize.item(f));
             }
-			 break;
-        }
-        else {
-            window.alert("EHHHH WRONG ANSWER FOREHEAD!");
-												break;
-        }
-    }
-
-	//Add a new "Clear Test" button that implements clearfunction
+												
+				//Add a new "Clear Test" button that implements clearfunction
 	let clear = document.createElement('button');
 	clear.onclick="click()";
 	clear.innerHTML = "Clear Test";
@@ -122,6 +115,14 @@ function load() {
 	check.innerHTML = "Check Test";
 	check.addEventListener("click", checkfunction);
 	quiz.appendChild(check);
+	
+			 break;
+        }
+        else {
+            window.alert("EHHHH WRONG ANSWER FOREHEAD!");
+												break;
+        }
+    }
  
 }
 
