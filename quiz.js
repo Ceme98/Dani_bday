@@ -62,7 +62,7 @@ function load() {
 				let questions = document.createElement("p");
 				questions.id = "divForQ"
 				let showquestion = document.createElement('div');
-				showquestion.id = "quest"
+				showquestion.class = "quest"
 				showquestion.innerHTML = quizQ["Quiz"][j]["question"];
 				questions.appendChild(showquestion);
 				//for loop gets all the incorrect_answers and puts them into new label elements and appends
@@ -181,7 +181,7 @@ function checkfunction(){
 	let quiz = document.getElementById('quiz');
 	let radios = quiz.getElementsByTagName('input');
 	let label = quiz.getElementsByTagName('label');
-	let questions = document.getElementsById('quest');
+	let questions = document.getElementsByClassName('quest');
 	let results = document.createElement("p");
 	let count = 0;
 	let correct = 0;
