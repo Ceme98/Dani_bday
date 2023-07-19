@@ -101,10 +101,11 @@ function load() {
 				questions.replaceChild(clone, old);
 				questions.replaceChild(old, randomize.item(f));
             }
-			i++;
+			 break;
         }
         else {
             window.alert("EHHHH WRONG ANSWER FOREHEAD!");
+												break;
         }
     }
 
