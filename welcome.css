@@ -1,0 +1,11 @@
+#headerWrapper{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25pt;
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+}
+
+#headerWrapper a{
+    color: white;
+}

@@ -1,0 +1,18 @@
+body{
+    background-image: url("../Media/Selfie.jpg");
+}
+a {
+    color: wheat;
+}
+
+div{
+    position: relative;
+    text-align: center;
+    animation: bounce 5s infinite;
+}
+
+@keyframes bounce {
+    0% {top: 0px;}
+    50% {top: 900px;}
+    100% {top: 0px;}
+}
