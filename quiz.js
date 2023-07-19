@@ -100,9 +100,8 @@ function load() {
 				old = randomize.item(randomize.length-1);
 				questions.replaceChild(clone, old);
 				questions.replaceChild(old, randomize.item(f));
-				
-							//Add a new "Clear Test" button that implements clearfunction
-	let clear = document.createElement('button');
+            }
+				let clear = document.createElement('button');
 	clear.onclick="click()";
 	clear.innerHTML = "Clear Test";
 	clear.addEventListener("click", clearfunction);
@@ -114,8 +113,6 @@ function load() {
 	check.innerHTML = "Check Test";
 	check.addEventListener("click", checkfunction);
 	quiz.appendChild(check);
-	
-            }
 			 break;
         }
         else {
