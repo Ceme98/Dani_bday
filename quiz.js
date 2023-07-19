@@ -181,7 +181,7 @@ function checkfunction(){
 	let quiz = document.getElementById('quiz');
 	let radios = quiz.getElementsByTagName('input');
 	let label = quiz.getElementsByTagName('label');
-	let questions = document.getElementsByClassName('quest');
+	let questions = quiz.getElementsTagName('div');
 	let results = document.createElement("p");
 	let count = 0;
 	let correct = 0;
