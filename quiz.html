@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="Styles/welcome.css">
+    <link rel="stylesheet" href="Styles/quiz.css">
 </head>
 
 <body>
@@ -14,6 +15,17 @@
         <p id="item1"><a href="welcome.html"> Home </a></li>
         <p id="item2"><a href="fave.html"> My Favourite Things About You</a></li>
         <p id="item3"><a href="quiz.html"> Quiz Time Baby</a></li> 
+    </div>
+
+    <div id="question">
+        <h1 id="status"> ARE YOU READY???? </h1>
+        <select id="choice">
+            <option value="Quiz" id="0"> YEAH BABY </option> 
+            <option value="No" id="1"> NO, I suck </option>
+        </select>
+        <p> <button onclick="load()"> Load Quiz </button> </p>
+        <script src="quiz.js"></script>
+        <script src="extension.js"></script>
     </div>
 
 </body>
