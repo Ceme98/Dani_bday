@@ -140,7 +140,8 @@ function clearfunction2() {
 	let images = document.getElementsByTagName('IMG');
 	let questions = document.getElementsByTagName('div');
 	let label = quiz.getElementsByTagName('label');
-
+	playTimer();
+	
 	for (let j = 0; j < questions.length; j++){
 		if (questions.item(j).style.color !=null){
 			questions.item(j).style.color = "";}}
@@ -230,7 +231,9 @@ function checkfunction(){
 		quiz.appendChild(results);
 		//Extension that animates a picture of the word congrats and changes the audio
 		// to congratulstions song if they got 70% or more on the quiz.
-		if ((correct/questions.length) >=(0.7)){animate();}
+		if ((correct/questions.length) >=(0.7)){
+			console.log("Should animate");
+			animate();}
 	}
 }
 function playTimer() {
@@ -240,19 +243,18 @@ function playTimer() {
 	/* controls lets you see when the song would end, and lets the user also not make use
 	 of the event handler as when song is paused, the ended condition would not be met.
 	 For TA use i have left the controls showing so that they could pause or mute the music if annoying.*/
-	audio.controls = true;
+	//audio.controls = true;
 	audio.autoplay = true;
-  let source = document.createElement('source');
+  	let source = document.createElement('source');
 	source.id = "music";
-  source.src = "music.mp3";
-  source.type = "audio/mpeg";
-  audio.appendChild(source);
+  	source.src = "music2.mp3";
+  	source.type = "audio/mpeg";
+  	audio.appendChild(source);
 	// Event listener that makes the audio also act as a timer such that, when the song ends,
 	// you are alerted that you did not finish the test on time and all your answers will be cleared.
 	audio.addEventListener('ended', (event) =>{
 		alert("Time's Up. \nYou did not complete the quiz before the song ended :(");
 		clearfunction2();
-		playTimer();
 	});
 	
 	}
