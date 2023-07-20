@@ -256,7 +256,8 @@ function playTimer() {
 		alert("Time's Up. \nYou did not complete the quiz before the song ended :(");
 		clearfunction2();
 	});
-	
+
+	quiz.appendChild(audio);
 	}
 function tryAgain(){
 	window.open("quiz.html", _self);
