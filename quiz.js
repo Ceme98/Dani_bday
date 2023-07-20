@@ -29,7 +29,14 @@ let element = document.createElement('br');
 function load() {
 
 	// Extension that adds audio into the page that automatically plays a song.
-	let audio = document.createElement('audio');
+
+    for (i = 0; i < selectedoption.length; i++){
+        if (selectedoption.item(i).selected == true && selectedoption.item(i).id == "0") {
+            window.alert("Good choice love :)");
+            let page = document.getElementById("question");
+            page.innerHTML = null;
+
+let audio = document.createElement('audio');
 	audio.id = "autoplay"
 	/* controls lets you see when the song would end, and lets the user also not make use
 	 of the event handler as when song is paused, the ended condition would not be met.
@@ -48,13 +55,6 @@ function load() {
 		clearfunction2();
 		tryAgain();
 	});
-
-
-    for (i = 0; i < selectedoption.length; i++){
-        if (selectedoption.item(i).selected == true && selectedoption.item(i).id == "0") {
-            window.alert("Good choice love :)");
-            let page = document.getElementById("question");
-            page.innerHTML = null;
 
             let amt_of_questions = quizQ["Quiz"].length;
 
