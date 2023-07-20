@@ -36,26 +36,7 @@ function load() {
             let page = document.getElementById("question");
             page.innerHTML = null;
 
-let audio = document.createElement('audio');
-	audio.id = "autoplay"
-	/* controls lets you see when the song would end, and lets the user also not make use
-	 of the event handler as when song is paused, the ended condition would not be met.
-	 For TA use i have left the controls showing so that they could pause or mute the music if annoying.*/
-	//audio.controls = true;
-	audio.autoplay = true;
-  let source = document.createElement('source');
-	source.id = "music";
-  source.src = "music.mp3";
-  source.type = "audio/mpeg";
-  audio.appendChild(source);
-	// Event listener that makes the audio also act as a timer such that, when the song ends,
-	// you are alerted that you did not finish the test on time and all your answers will be cleared.
-	audio.addEventListener('ended', (event) =>{
-		alert("Time's Up. \nYou did not complete the quiz before the song ended :(");
-		clearfunction2();
-		tryAgain();
-	});
-
+													playTimer();
             let amt_of_questions = quizQ["Quiz"].length;
 
             for (let j = 0; j < amt_of_questions; j++){
@@ -252,8 +233,30 @@ function checkfunction(){
 		if ((correct/questions.length) >=(0.7)){animate();}
 	}
 }
-
+function playTimer() {
+	
+	let audio = document.createElement('audio');
+	audio.id = "autoplay"
+	/* controls lets you see when the song would end, and lets the user also not make use
+	 of the event handler as when song is paused, the ended condition would not be met.
+	 For TA use i have left the controls showing so that they could pause or mute the music if annoying.*/
+	audio.controls = true;
+	audio.autoplay = true;
+  let source = document.createElement('source');
+	source.id = "music";
+  source.src = "music.mp3";
+  source.type = "audio/mpeg";
+  audio.appendChild(source);
+	// Event listener that makes the audio also act as a timer such that, when the song ends,
+	// you are alerted that you did not finish the test on time and all your answers will be cleared.
+	audio.addEventListener('ended', (event) =>{
+		alert("Time's Up. \nYou did not complete the quiz before the song ended :(");
+		clearfunction2();
+		tryAgain();
+	});
+	
+	}
 function tryAgain(){
-	window.open("quiz.html");
+	window.open("quiz.html", _self);
 }
 
