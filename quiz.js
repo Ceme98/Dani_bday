@@ -252,7 +252,7 @@ function playTimer() {
 	audio.addEventListener('ended', (event) =>{
 		alert("Time's Up. \nYou did not complete the quiz before the song ended :(");
 		clearfunction2();
-		tryAgain();
+		playTimer();
 	});
 	
 	}
@@ -260,7 +260,7 @@ function tryAgain(){
 	window.open("quiz.html", _self);
 }
 
-ction animate(){
+function animate(){
     let music = document.getElementById('autoplay');
     music2 = music.cloneNode();
     music2.src = "congrats.mp3";
